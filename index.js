@@ -74,6 +74,33 @@ run().catch(console.dir);
 app.get('/', (req, res) => {
     res.send('Running genius server');
 })
+app.get('/hello', (req, res) => {
+    res.send("hello updated api testing")
+})
 app.listen(port, () => {
     console.log('Running Genius server on port', port)
 })
+
+/*
+one time:
+1. heroku account open
+2.heroku software install
+
+
+every project:
+
+1.gitignore (node_module,.env)
+2. git init
+3. push everything to git
+4. make sure you have this script: "start":"node index.js",
+5.make suer: put process.env.PORT in front od your port number
+6.heroku login
+7.heroku create (only one time for a project)
+8.git push heroku main/master
+
+
+update:
+1.save everything check locally
+2.git add,git commit -m"first commit",git push;
+3 git push heroku main/master
+*/
